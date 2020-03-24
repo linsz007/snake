@@ -1,0 +1,29 @@
+.body {
+  width: 700px;
+  height: 700px;
+  margin: 100px auto;
+  border: 1px solid #FF0;
+}
+
+.menu{
+  overflow: hidden;
+}
+
+.menu button{
+  width: 80px;
+  height: 30px;
+  margin: 10px 20px;
+  float: left;
+}
+
+.menu button:last-of-type{
+  float: right;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  margin-right: 100px;
+}
+
+#canvas{
+  margin: 10px 50px;
+}
