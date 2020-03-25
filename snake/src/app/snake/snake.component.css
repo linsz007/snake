@@ -16,12 +16,14 @@
   float: left;
 }
 
-.menu button:last-of-type {
+.menu span {
   float: right;
-  background: transparent;
-  border: 0;
-  outline: 0;
   margin-right: 100px;
+  line-height: 50px;
+}
+
+.menu span a{
+  margin-left: 5px;
 }
 
 #canvas {

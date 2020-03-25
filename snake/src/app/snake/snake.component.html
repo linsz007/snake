@@ -1,8 +1,9 @@
 <div class="body">
   <div class="menu">
-<!--    <button>开始</button>-->
-<!--    <button>暂停</button>-->
-<!--    <button>得分:</button>-->
+    <button (click)="onStart(startOrReset)">{{startOrReset}}</button>
+    <button (click)="onSuspend()">暂停</button>
+    <span>得分: <a>{{score}}</a></span>
+    <span>时间: <a>{{time|snakePipe}}</a></span>
   </div>
   <canvas id="canvas" width="600px" height="600px" #canvas></canvas>
 </div>

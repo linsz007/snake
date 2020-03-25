@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { SnakeComponent } from './snake.component';
 import { RouterModule } from '@angular/router';
+import { ShareModule } from '../../share/share.module';
 
 const routes = [
   {
@@ -11,7 +12,7 @@ const routes = [
 
 @NgModule({
   declarations: [SnakeComponent],
-  imports: [RouterModule.forChild(routes)]
+  imports: [RouterModule.forChild(routes), ShareModule]
 })
 export class SnakeModule {
 }
