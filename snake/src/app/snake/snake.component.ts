@@ -1,18 +1,19 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { interval, Subscription, timer } from 'rxjs';
+import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { fromEvent, Subscription, timer } from 'rxjs';
 
 @Component({
   selector: 'app-snake',
   templateUrl: './snake.component.html',
   styleUrls: ['./snake.component.css']
 })
-export class SnakeComponent implements OnInit {
+export class SnakeComponent implements OnInit, OnDestroy {
 
   @ViewChild('canvas', {static: true}) private c: ElementRef;
 
   public snakeList: Array<snakeList> = [];
 
-  private timeSubscript: Subscription; //定时器
+  private timeSubscription: Subscription; //定时器
+  private keyboardSubscription: Subscription; // 键盘监听
 
   public time: number = 0; // 时间
 
@@ -30,6 +31,8 @@ export class SnakeComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.listenKeyboard(); // 注册键盘监听
+
     this.snakeList = [];
     this.snakeList.push({x: 4, y: 4, w: 16, h: 16});
     this.snakeList.push({x: 4, y: 28, w: 16, h: 16});
@@ -43,11 +46,14 @@ export class SnakeComponent implements OnInit {
     this.canvas.fillRect(4, 28, 16, 16);
   }
 
+  ngOnDestroy(): void {
+  }
+
   /**
    * 开始
    */
   public onStart(startOrReset: string) {
-    this.timeSubscript && this.timeSubscript.unsubscribe();
+    this.timeSubscription && this.timeSubscription.unsubscribe();
     this.startOrReset = '重来';
     if (startOrReset !== '继续') {
       this.time = 0;
@@ -58,7 +64,7 @@ export class SnakeComponent implements OnInit {
       this.time = this.suspendTime;
     }
     // 定时器启动
-    this.timeSubscript = timer((startOrReset !== '继续' ? 0 : 1000), 1000).subscribe(sec => {
+    this.timeSubscription = timer((startOrReset !== '继续' ? 0 : 1000), 1000).subscribe(sec => {
       this.refreshCanvas();
       this.time = startOrReset !== '继续' ? sec : sec + this.suspendTime + 1;
     });
@@ -69,7 +75,7 @@ export class SnakeComponent implements OnInit {
    */
   public onSuspend() {
     this.suspendTime = this.time;
-    this.timeSubscript.unsubscribe();
+    this.timeSubscription.unsubscribe();
     this.startOrReset = '继续';
   }
 
@@ -118,6 +124,38 @@ export class SnakeComponent implements OnInit {
       this.snakeList[i].x = this.snakeList[i].x + this.direction[0];
       this.snakeList[i].y = this.snakeList[i].y + this.direction[1];
     }
+  }
+
+  /**
+   * 键盘事件
+   */
+  public onKeyDown(key: string) {
+    switch (key) {
+      case 'ArrowUp':
+
+        break;
+      case 'ArrowRight':
+
+        break;
+      case 'ArrowDown':
+        this.onKeyDown(event.key);
+        break;
+      case 'ArrowLeft':
+        
+        break;
+      case ' ':
+
+        break;
+    }
+  }
+
+  /**
+   * 键盘监听
+   */
+  private listenKeyboard() {
+    this.keyboardSubscription = fromEvent(window, 'keydown').subscribe((event: any) => {
+      this.onKeyDown(event.key);
+    });
   }
 
 }
