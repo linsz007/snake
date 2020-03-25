@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-snake',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SnakeComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('canvas', {static: true}) private canvas: ElementRef;
+
+  public ctx: any;
+
+  constructor() {
+  }
 
   ngOnInit() {
+    this.ctx = this.canvas.nativeElement.getContext('2d');
+    console.log(this.ctx);
   }
 
 }

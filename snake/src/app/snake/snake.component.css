@@ -5,18 +5,18 @@
   border: 1px solid #FF0;
 }
 
-.menu{
+.menu {
   overflow: hidden;
 }
 
-.menu button{
+.menu button {
   width: 80px;
   height: 30px;
   margin: 10px 20px;
   float: left;
 }
 
-.menu button:last-of-type{
+.menu button:last-of-type {
   float: right;
   background: transparent;
   border: 0;
@@ -24,6 +24,12 @@
   margin-right: 100px;
 }
 
-#canvas{
+#canvas {
   margin: 10px 50px;
+  background: #58a;
+  background-image: linear-gradient(hsla(0, 0%, 100%, .3) 1px, transparent 0),
+  linear-gradient(90deg, hsla(0, 0%, 100%, .3) 1px, transparent 0),
+  linear-gradient(hsla(0, 0%, 100%, .3) 1px, transparent 0),
+  linear-gradient(90deg, hsla(0, 0%, 100%, .3) 1px, transparent 0);
+  background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
 }
