@@ -7,16 +7,21 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 })
 export class SnakeComponent implements OnInit {
 
-  @ViewChild('canvas', {static: true}) private canvas: ElementRef;
+  @ViewChild('canvas', {static: true}) private c: ElementRef;
 
-  public ctx: any;
+  public canvas: any;
 
   constructor() {
   }
 
   ngOnInit() {
-    this.ctx = this.canvas.nativeElement.getContext('2d');
-    console.log(this.ctx);
+    this.canvas = this.c.nativeElement.getContext('2d');
+    console.log(this.canvas);
+    // 规律是+24
+    this.canvas.fillStyle = 'orange';
+    this.canvas.fillRect(4, 4, 16, 16);
+    this.canvas.fillRect(4, 28, 16, 16);
+    this.canvas.fillRect(4, 52, 16, 16);
   }
 
 }
