@@ -11,7 +11,7 @@ export class SnakeComponent implements OnInit, OnDestroy {
   @ViewChild('canvas', {static: true}) private c: ElementRef;
 
   public snakeList: Array<SnakeItem> = []; //蛇身
-  public food: SnakeItem = new SnakeItem();
+  public food: SnakeItem = new SnakeItem(); // 食物
 
   private timeSubscription: Subscription; //定时器
   private keyboardSubscription: Subscription; // 键盘监听
@@ -42,7 +42,6 @@ export class SnakeComponent implements OnInit, OnDestroy {
     this.snakeList.push({x: 4, y: 28, w: 16, h: 16, directionArr: [0, 24]});
     this.currentDirectionArr = [0, 24];
     this.score = 0;
-
 
     this.canvas = this.c.nativeElement.getContext('2d');
     // 生成初始小蛇 规律是+24
@@ -161,7 +160,6 @@ export class SnakeComponent implements OnInit, OnDestroy {
       this.timeSubscription.unsubscribe();
       this.isGameOver = true;
     }
-
   }
 
   /**
