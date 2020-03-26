@@ -5,5 +5,12 @@
     <span>得分: <a>{{score}}</a></span>
     <span>时间: <a>{{time|snakePipe}}</a></span>
   </div>
-  <canvas id="canvas" width="600px" height="600px" #canvas></canvas>
+  <div [ngStyle]="{opacity:isGameOver?0.6:1}">
+    <canvas id="canvas" width="600px" height="600px" #canvas></canvas>
+  </div>
+</div>
+
+<!--死亡弹窗-->
+<div class="over-modal" *ngIf="isGameOver">
+  游戏结束，得分为：{{score}}分！
 </div>

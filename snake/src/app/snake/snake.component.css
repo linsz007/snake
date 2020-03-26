@@ -22,7 +22,7 @@
   line-height: 50px;
 }
 
-.menu span a{
+.menu span a {
   margin-left: 5px;
 }
 
@@ -34,4 +34,14 @@
   linear-gradient(hsla(0, 0%, 100%, .3) 1px, transparent 0),
   linear-gradient(90deg, hsla(0, 0%, 100%, .3) 1px, transparent 0);
   background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
+}
+
+.over-modal {
+  width: 500px;
+  text-align: center;
+  font-size: 30px;
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: calc(50% - 250px);
 }
