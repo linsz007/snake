@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8d5b13b9-af8e-4e56-a6ae-8e7ef19b22b7" name="默认" comment="">
       <change beforePath="$PROJECT_DIR$/snake/src/app/snake/snake.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/snake/src/app/snake/snake.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snake/src/app/snake/snake.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/snake/src/app/snake/snake.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snake/src/app/snake/snake.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/snake/src/app/snake/snake.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snake/src/app/snake/snake.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/snake/src/app/snake/snake.module.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/snake/src/app/snake/snake.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" column="11" lean-forward="true" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+            <state relative-caret-position="330">
+              <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -39,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/snake/src/app/snake/snake.component.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+            <state relative-caret-position="396">
+              <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -71,9 +68,9 @@
         <option value="$PROJECT_DIR$/snake/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/snake/src/app/pipes/snake-pipe.pipe.ts" />
         <option value="$PROJECT_DIR$/snake/src/share/share.module.ts" />
-        <option value="$PROJECT_DIR$/snake/src/app/snake/snake.component.css" />
         <option value="$PROJECT_DIR$/snake/src/app/snake/snake.component.ts" />
         <option value="$PROJECT_DIR$/snake/src/app/snake/snake.component.html" />
+        <option value="$PROJECT_DIR$/snake/src/app/snake/snake.component.css" />
       </list>
     </option>
   </component>
@@ -185,12 +182,12 @@
       <workItem from="1585036013709" duration="160000" />
       <workItem from="1585036190222" duration="3837000" />
       <workItem from="1585100866875" duration="21457000" />
-      <workItem from="1585186080615" duration="14961000" />
+      <workItem from="1585186080615" duration="15529000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40415000" />
+    <option name="totallyTimeSpent" value="40983000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="66" y="-11" width="1855" height="1092" extended-state="6" />
@@ -318,13 +315,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/snake/src/app/snake/snake.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/snake/src/app/snake/snake.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3699">
@@ -337,8 +327,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/snake/src/app/snake/snake.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="11" lean-forward="true" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+        <state relative-caret-position="330">
+          <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/snake/src/app/snake/snake.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
         </state>
       </provider>
     </entry>

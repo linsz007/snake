@@ -14,6 +14,8 @@
   height: 30px;
   margin: 10px 20px;
   float: left;
+  outline: none;
+  cursor: pointer;
 }
 
 .menu span {
